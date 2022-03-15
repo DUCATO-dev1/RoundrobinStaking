@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "FARMING_CONTROL_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "OPERATOR_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "OWNER_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SNAPSHOT_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IHookCallee",
+						"name": "observer",
+						"type": "address"
+					}
+				],
+				"name": "addHook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IHookCallee",
+						"name": "observer",
+						"type": "address"
+					}
+				],
+				"name": "removeHook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "roleControl",
+						"type": "address"
+					}
+				],
+				"name": "setRoleControl",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addHook(address)": {
+					"details": "add hook callback",
+					"params": {
+						"observer": "hook callee"
+					}
+				},
+				"removeHook(address)": {
+					"details": "remove hook callback",
+					"params": {
+						"observer": "hook callee"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/staking/SKHookCaller.sol": "SKHookCaller"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/IAccessControl.sol": {
+			"keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+				"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+			]
+		},
+		"@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+			"keccak256": "0x9772845c886f87a3aab315f8d6b68aa599027c20f441b131cd4afaf65b588900",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ad2f29a9c17a4f746416c9e254e17671f43c409dbfa6e4d7d76c3e4a83212d31",
+				"dweb:/ipfs/QmTqU65L6iu6yqmXKzcNLPioR8etzKPWycpDJCm17ifVdS"
+			]
+		},
+		"contracts/interfaces/IHookCallee.sol": {
+			"keccak256": "0xd02a3bc80b32ef7449f3ee34735448ab258696fa79265cff846cb95fc2dd3e9a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5193961743c83809a1b2e17066660d692a643c3dd219ba5f252358f3f66c2769",
+				"dweb:/ipfs/Qmdt3cYqLxSkbUt99KqjvC4rAkRcmf4iKE73Ebw5TcctKC"
+			]
+		},
+		"contracts/interfaces/IHookCaller.sol": {
+			"keccak256": "0x9c0e33c762da8765878abb37afdf1c82f0c3eff2a4c703bc13e9de01935b41fb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e20b536589fff95af5653c4705db9fc0a9c01320d008179e908aee7a334c736e",
+				"dweb:/ipfs/QmNNLzfyqFqa2hm1X9phzvaaCt9jtN9k6Lv3votHfwGf5t"
+			]
+		},
+		"contracts/interfaces/ILPPool.sol": {
+			"keccak256": "0xfebb7f7018f6287ba79e1b2289950592d102e79402ef0819ab72d57be000e510",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3dff39fe23b1916f5bbaa75320ed4b82af3ec12c9cf560f2e4eba3bb8f9d766e",
+				"dweb:/ipfs/QmQQxbFvZKiySkV65hFH5WHBvKAPSKc3am1w9Cz4kqXW7r"
+			]
+		},
+		"contracts/roles/RoleGuard.sol": {
+			"keccak256": "0xcd71f2d1cc735071b297a8055f2bd49f6cec32ecebb1d008ee02fd056d2dddd1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5d3205fb633cd579f58017a4665528f951176e4ddd3388cc18b69f37a0746588",
+				"dweb:/ipfs/QmcqtBUcisMhB4EwVG1dwhSUCjam94hNLscXcE1rQHdJDH"
+			]
+		},
+		"contracts/staking/SKHookCaller.sol": {
+			"keccak256": "0xe64858101fb8aeb3fa43c0678bc3a5ffbf96e451a69ab3d182e84f25db9bdb92",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e6efc68757e93b3d99644d923f641f8b20b3fca5d56e431207fc6c00c9792233",
+				"dweb:/ipfs/QmS5qGrRRv4UQiw8dNE4qZd8p398pkNJYVdG3PQ9EG2coe"
+			]
+		}
+	},
+	"version": 1
+}
